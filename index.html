@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Modern Music Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="sidebar-header">
+                <i class="fa-solid fa-music"></i>
+                <h2>Playlist</h2>
+            </div>
+
+            <ul id="playlist"></ul>
+
+            <!-- FOLDER PICKER -->
+            <div class="folder-picker">
+
+                <label for="folderInput" class="custom-upload">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Select Music Folder
+                </label>
+
+                <input
+                    type="file"
+                    id="folderInput"
+                    webkitdirectory
+                    directory
+                    multiple
+                />
+
+            </div>
+
+        </div>
+
+
+        <!-- PLAYER -->
+        <div class="player-container">
+
+            <!-- IMAGE -->
+            <div class="image-box">
+
+                <img
+                    id="cover"
+                    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop"
+                />
+
+            </div>
+
+
+            <!-- SONG INFO -->
+            <div class="song-details">
+
+                <div class="song-left">
+                    <h2 id="title">No Song Selected</h2>
+                    <p id="artist">Unknown Artist</p>
+                </div>
+
+                <div class="favorite">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-wrapper">
+
+                <span id="currentTime">0:00</span>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+            <div class="controls">
+
+                <button id="prev">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button class="play-btn" id="play">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button id="next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+            </div>
+
+
+            <!-- VOLUME -->
+            <div class="volume-section">
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                />
+
+            </div>
+
+            <audio id="audio"></audio>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
