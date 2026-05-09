@@ -5,7 +5,8 @@ A modern and responsive Music Player built using HTML, CSS, and JavaScript as pa
 ---
 
 ## 🚀 Live Demo  
-https://deepikakonderu.github.io/CodeAlpha_MusicPlayer/
+https://code-alpha-music-player-blue.vercel.app/
+
 
 ---
 
